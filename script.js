@@ -55,10 +55,58 @@ document.getElementById('accountForm').addEventListener('submit', async (e) => {
 async function fetchData() {
   const response = await fetch(`${scriptUrl}?action=getData`);
   const data = await response.json();
-  const dataDisplay = document.getElementById('dataDisplay');
-  dataDisplay.innerHTML = JSON.stringify(data, null, 2);
-}
 
-// Initialize
-fetchAsins();
-fetchData();
+  // Populate Accounts Table
+  const accountsTableBody = document.querySelector('#accountsTable tbody');
+  accountsTableBody.innerHTML = data.accounts
+    .map(
+      (row) => `
+      <tr>
+        <td>${row[0]}</td>
+        <td>${row[1]}</td>
+        <td>${row[2]}</td>
+      </tr>
+    `
+    )
+    .join('');
+
+  // Populate Sellers Table
+  const sellersTableBody = document.querySelector('#sellersTable tbody');
+  sellersTableBody.innerHTML = data.sellers
+    .map(
+      (row) => `
+      <tr>
+        <td>${row[0]}</td>
+        <td>${row[1]}</td>
+        <td>${row[2]}</td>
+        <td>${row[3]}</td>
+        <td>${row[4]}</td>
+      </tr>
+    `
+    )
+    .join('');
+
+  // Populate Orders Table
+  const ordersTableBody = document.querySelector('#ordersTable tbody');
+  ordersTableBody.innerHTML = data.orders
+    .map(
+      (row) => `
+      <tr>
+        <td>${row[0]}</td>
+        <td>${row[1]}</td>
+        <td>${row[2]}</td>
+        <td>${row[3]}</td>
+        <td>${row[4]}</td>
+        <td>${row[5]}</td>
+        <td>${row[6]}</td>
+        <td>${row[7]}</td>
+        <td>${row[8]}</td>
+        <td>${row[9]}</td>
+        <td>${row[10]}</td>
+        <td>${row[11]}</td>
+        <td>${row[12]}</td>
+      </tr>
+    `
+    )
+    .join('');
+}
