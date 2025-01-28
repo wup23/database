@@ -110,14 +110,67 @@
     </form>
   </section>
 
-  <!-- Display Data -->
-  <section id="dataDisplaySection" class="form-section" style="display: none;">
-    <h2>Data Tables</h2>
-    <div id="dataDisplay">
-      <!-- Data will be populated dynamically -->
-    </div>
-  </section>
+ <!-- Display Data -->
+<section id="dataDisplaySection" class="form-section" style="display: none;">
+  <h2>View Data</h2>
 
+  <!-- Accounts Table -->
+  <h3>Accounts</h3>
+  <table id="accountsTable">
+    <thead>
+      <tr>
+        <th>Account ID</th>
+        <th>Account Name</th>
+        <th>Eligibility</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be populated dynamically -->
+    </tbody>
+  </table>
+
+  <!-- Sellers Table -->
+  <h3>Sellers</h3>
+  <table id="sellersTable">
+    <thead>
+      <tr>
+        <th>Seller ID</th>
+        <th>Seller Name</th>
+        <th>ASIN</th>
+        <th>Price</th>
+        <th>Commission</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be populated dynamically -->
+    </tbody>
+  </table>
+
+  <!-- Orders Table -->
+  <h3>Orders</h3>
+  <table id="ordersTable">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Account ID</th>
+        <th>Order Date</th>
+        <th>ASIN</th>
+        <th>Seller</th>
+        <th>Price</th>
+        <th>Delivery Address</th>
+        <th>Delivery Date</th>
+        <th>Ratings</th>
+        <th>Order Status</th>
+        <th>Price Settled</th>
+        <th>Commission Settled</th>
+        <th>Completed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Rows will be populated dynamically -->
+    </tbody>
+  </table>
+</section>
   <script src="script.js"></script>
 </body>
 </html>
