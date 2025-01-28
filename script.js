@@ -1,5 +1,5 @@
 // ✅ Replace with your Google Apps Script Web App URL
-const scriptUrl = 'https://script.google.com/macros/s/AKfycbx0o2Mr0RBO4gi6WnNhmFWvzzBwpk40l5AChj2zOEOuaG1zGxmot-co3WSS6eD6U9YV/exec';
+const scriptUrl = 'https://script.google.com/macros/s/AKfycbwGy9R9l51Vu6Kn1f0MmJW_mxVdBJkd06MkWIn5JpM/dev';
 
 // Function to show the selected form
 function showForm(formId) {
